@@ -13,15 +13,19 @@
 <script>
 
 const axios = require('axios');
+import youtubeAPIKey from "../../apiKeys";
 
 export default {
 async mounted() {
   this.getVideos();
+  this.getAPIKey();
+
 },
 data: () => ({
   video: {
     id: "",
     title: "",
+    youtubeAPIKey: "",
   },
 }),
 methods: {
@@ -29,6 +33,13 @@ methods: {
      const response = await axios.get("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCAuUUnT6oDeKwE6v1NGQxug&maxResults=1&order=date&type=video&key=AIzaSyBp1cSbOuPp9mTYHtez55ycUOScbK7hABA")
       this.video.id = response.data.items[0].id.videoId; 
       this.video.title = response.data.items[0].snippet.title;
+  },
+  getAPIKey: function () {
+    if (process.env === "development") {
+      this.youtubeAPIKey = youtubeAPIKey;
+    } else if (process.env === "production"){
+      this.youtubeAPIKey = process.env.YT_KEY
+    }
   }
 } 
 }

@@ -56,8 +56,4 @@ export default {
   margin-right: 5px;
 }
 
-.quote {
-
-}
-
 </style>
