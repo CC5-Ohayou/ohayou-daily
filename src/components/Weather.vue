@@ -1,8 +1,9 @@
 <template>
-  <v-app>
-    <v-card>
+    <v-card color="light-blue lighten-5">
+      <v-card-title class="justify-center" primary-title>
+        <h1 class="headline mb-0">Weather</h1>
+      </v-card-title>
       <v-card-text>
-        <h1>Weather</h1>
         <span v-if="error">{{information}} </span>
         <span v-else>
           <h3>- {{information[0].date}} -</h3>
@@ -13,7 +14,6 @@
         </span>
       </v-card-text>
     </v-card>
-  </v-app>
 </template>
 
 <script>
@@ -48,4 +48,5 @@ export default {
 </script>
 
 <style>
+
 </style>
