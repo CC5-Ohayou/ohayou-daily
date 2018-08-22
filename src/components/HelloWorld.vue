@@ -31,12 +31,18 @@
 </template>
 
 <script>
+// import getRobotPhoto from "../../getRobotPhoto.js";
+// import getRandomQuote from "../../getRandomQuote.js";
+// import getRandomWord from "../../getRandomWord.js";
+
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
+  components:{
+  },
   props: {
     msg: String
-  }
-}
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
