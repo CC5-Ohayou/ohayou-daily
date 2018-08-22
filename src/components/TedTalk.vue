@@ -2,7 +2,7 @@
   <div class="ted__container">
     <v-card dark class="black">
       <v-card-media src="https://i.imgur.com/hkO1HGK.png" height="60px" ></v-card-media>
-      <v-card-title class="justify-center headline font-weight-medium" primary-title>
+      <v-card-title class="justify-center headline font-weight-thin" primary-title>
         {{this.video.title}}
      </v-card-title>
       <iframe width="100%" height="400" :src="'https://www.youtube.com/embed/' + this.video.id + '?modestbranding=1&autohide=1&showinfo=0'" frameborder="0" allowfullscreen></iframe>
