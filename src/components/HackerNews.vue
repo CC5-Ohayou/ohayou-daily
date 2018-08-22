@@ -21,16 +21,6 @@ const rapid = new RapidAPI("default-application_5b74c245e4b02e44927d2a04", "16e0
 export default {
 async mounted() {
   await this.getAllStories();
-  rapid.call('HackerNews', 'getItem', { 
-	'itemId': 17814386
-
-    }).on('success', (payload)=>{
-      console.log(payload)
-    }).on('error', (payload)=>{
-      /*YOUR CODE GOES HERE*/ 
-    });
-
-
 },
 data: () => ({
   storiesArray: [],
@@ -83,11 +73,10 @@ methods: {
 }
 
 .hn__title {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .hn__title:hover {
-  font-size: 1.2em;
   color: #0288D1;
 }
 

@@ -9,7 +9,7 @@
         <span v-else>
           <img height="40px" src="../assets/sun.svg"> <br>
            <br>
-          High: {{this.convert(information[0].high)}} °C | Low: {{this.convert(information[0].low)}} °C<br>
+          High: {{this.convert(information[0].high)}} °C  -  Low: {{this.convert(information[0].low)}} °C<br>
           {{information[0].text}}
         </span>
       </v-card-text>
@@ -51,13 +51,6 @@ export default {
       .on("error", payload => {
         this.information = 'Error fetching results';
         this.error = true;
-      });
-
-      unirest.get("https://bestapi-ted-v1.p.mashape.com/talksByDescription?description=education&size=3")
-      .header("X-Mashape-Key", "okp4jvdXPQmshTESeF7gpJryuF2Kp1W5m7XjsnuCNmvURQUQG5")
-      .header("X-Mashape-Host", "bestapi-ted-v1.p.mashape.com")
-      .end(function (result) {
-        console.log(result.status, result.headers, result.body);
       });
   },
   methods: {

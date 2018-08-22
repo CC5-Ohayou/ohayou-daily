@@ -52,7 +52,7 @@ export default {
 }
 
 .quotes__container {
-  margin-top: 20px;
+  margin-top: 22px;
   margin-right: 5px;
 }
 
