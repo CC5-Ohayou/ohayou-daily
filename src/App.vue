@@ -42,11 +42,8 @@
 
 
       <!-- REPLACE WITH CONTENT -->
-<<<<<<< HEAD
+      <HackerNews />
       <Weather />
-=======
-      <HackerNews/>
->>>>>>> master
       <!-- REPLACE WITH CONTENT -->
 
 
@@ -55,23 +52,14 @@
 </template>
 
 <script>
-<<<<<<< HEAD
-import HelloWorld from "./components/HelloWorld.vue";
 import Weather from "./components/Weather.vue";
-=======
-import HelloWorld from './components/HelloWorld.vue'
-import HackerNews from './components/HackerNews.vue'
->>>>>>> master
+import HackerNews from './components/HackerNews.vue';
 
 export default {
   name: "app",
   components: {
-    HelloWorld,
-<<<<<<< HEAD
     Weather,
-=======
-    HackerNews
->>>>>>> master
+    HackerNews,
   }
 };
 </script>
