@@ -28,37 +28,36 @@
       </v-navigation-drawer> -->
 
       <v-toolbar
-      color="blue darken-3"
+      color="blue-grey darken-3"
       dark
       app
       :clipped-left="$vuetify.breakpoint.mdAndup"
       fixed>
-        <v-toolbar-title style="width: 300px, align: left">
-          <span class="app-title">My Dashboard</span>
+        <v-toolbar-title flat>
+          <span style="text-align: center" class="app-title">Ohayou Daily</span>
         </v-toolbar-title>
         <v-spacer/>
-        <span>makedankmemes</span>
       </v-toolbar>
 
 
       <!-- REPLACE WITH CONTENT -->
-      <v-container grid-list-md text-md-center>
+      <v-container grid-list-md text-md-center style="margin-top: 0px; padding-right: 0px; padding-left: 0px;">
         <v-layout row wrap>
           <v-flex md6 fill-height>
             <Weather />
+            <Quote />
           </v-flex>
           <v-flex md6 fill-height>
             <HackerNews />
           </v-flex>
         </v-layout>
       </v-container>
-      <v-container grid-list-md text-md-center>
+      <!-- <v-container grid-list-md text-md-center>
         <v-layout row wrap>
           <v-flex md6 fill-height>
-            <Quote />
           </v-flex>
         </v-layout>
-      </v-container>
+      </v-container> -->
       <!-- REPLACE WITH CONTENT -->
 
 
