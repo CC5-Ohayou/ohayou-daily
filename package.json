@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "http-server ./dist",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "heroku-postbuild": "yarn build"
   },
   "dependencies": {
+    "http-server": "^0.11.1",
     "rapidapi-connect": "^0.0.6",
     "unirest": "^0.5.1",
     "vue": "^2.5.17",
