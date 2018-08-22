@@ -42,8 +42,16 @@
 
 
       <!-- REPLACE WITH CONTENT -->
-      <HackerNews />
-      <Weather />
+      <v-container grid-list-md text-md-center>
+        <v-layout row wrap>
+          <v-flex md6 fill-height>
+            <Weather />
+          </v-flex>
+          <v-flex md6 fill-height>
+            <HackerNews />
+          </v-flex>
+        </v-layout>
+      </v-container>
       <!-- REPLACE WITH CONTENT -->
 
 
@@ -72,5 +80,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  font-size: 16px;
 }
 </style>
