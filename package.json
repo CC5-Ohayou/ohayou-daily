@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "rapidapi-connect": "^0.0.6",
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "vuetify": "^1.1.13"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.1",
