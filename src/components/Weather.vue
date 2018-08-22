@@ -52,13 +52,6 @@ export default {
         this.information = 'Error fetching results';
         this.error = true;
       });
-
-      unirest.get("https://bestapi-ted-v1.p.mashape.com/talksByDescription?description=education&size=3")
-      .header("X-Mashape-Key", "okp4jvdXPQmshTESeF7gpJryuF2Kp1W5m7XjsnuCNmvURQUQG5")
-      .header("X-Mashape-Host", "bestapi-ted-v1.p.mashape.com")
-      .end(function (result) {
-        console.log(result.status, result.headers, result.body);
-      });
   },
   methods: {
     convert: function(fahrenheit) {

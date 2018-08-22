@@ -50,6 +50,9 @@
           <v-flex md6 fill-height>
             <HackerNews />
           </v-flex>
+          <v-flex md12 fill-height>
+            <TedTalk />
+          </v-flex>
         </v-layout>
       </v-container>
       <!-- <v-container grid-list-md text-md-center>
@@ -59,8 +62,6 @@
         </v-layout>
       </v-container> -->
       <!-- REPLACE WITH CONTENT -->
-
-
     </v-app>
   </div>
 </template>
@@ -69,6 +70,7 @@
 import Weather from "./components/Weather.vue";
 import HackerNews from './components/HackerNews.vue';
 import Quote from './components/Quote.vue';
+import TedTalk from './components/TedTalk.vue'
 
 export default {
   name: "app",
@@ -76,6 +78,7 @@ export default {
     Weather,
     HackerNews,
     Quote,
+    TedTalk,
   }
 };
 </script>
