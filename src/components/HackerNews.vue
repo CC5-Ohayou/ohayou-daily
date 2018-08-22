@@ -83,11 +83,10 @@ methods: {
 }
 
 .hn__title {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .hn__title:hover {
-  font-size: 1.2em;
   color: #0288D1;
 }
 

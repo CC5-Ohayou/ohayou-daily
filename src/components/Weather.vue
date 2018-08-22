@@ -9,7 +9,7 @@
         <span v-else>
           <img height="40px" src="../assets/sun.svg"> <br>
            <br>
-          High: {{this.convert(information[0].high)}} °C | Low: {{this.convert(information[0].low)}} °C<br>
+          High: {{this.convert(information[0].high)}} °C  -  Low: {{this.convert(information[0].low)}} °C<br>
           {{information[0].text}}
         </span>
       </v-card-text>
