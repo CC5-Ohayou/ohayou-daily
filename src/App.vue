@@ -1,10 +1,5 @@
 <template>
   <div id="app">
-<<<<<<< HEAD
-    <img alt="Vue logo" src="./assets/logo.png">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <Quote />
-=======
     <v-app>
 
       <!-- SIDE DRAWER -->
@@ -48,33 +43,26 @@
 
       <!-- REPLACE WITH CONTENT -->
       <HackerNews />
+      <Quote />
       <Weather />
       <!-- REPLACE WITH CONTENT -->
 
 
     </v-app>
->>>>>>> master
   </div>
 </template>
 
 <script>
-<<<<<<< HEAD
-// import HelloWorld from './components/HelloWorld.vue'
-import Quote from "./components/Quote.vue"
-=======
 import Weather from "./components/Weather.vue";
 import HackerNews from './components/HackerNews.vue';
+import Quote from './compnents/Quote.vue'
 
->>>>>>> master
 export default {
   name: "app",
   components: {
-<<<<<<< HEAD
-    Quote
-=======
     Weather,
     HackerNews,
->>>>>>> master
+    Quote,
   }
 };
 </script>
