@@ -8,8 +8,8 @@
         <span v-else>
           <h3>- {{information[0].date}} -</h3>
           Today's Forecast:<br>
-          High: {{information[0].high}} F<br>
-          Low: {{information[0].low}} F<br>
+          High: {{this.convert(information[0].high)}} C<br>
+          Low: {{this.convert(information[0].low)}} C<br>
           {{information[0].text}}<br>
         </span>
       </v-card-text>
@@ -43,6 +43,12 @@ export default {
         this.information = 'Error fetching results';
         this.error = true;
       });
+  },
+  methods: {
+    convert: function(fahrenheit) {
+      const celsius = (fahrenheit -32) * 5 / 9;
+      return Math.round(celsius);
+    }
   }
 };
 </script>
