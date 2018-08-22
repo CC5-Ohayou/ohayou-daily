@@ -52,6 +52,13 @@
           </v-flex>
         </v-layout>
       </v-container>
+      <v-container grid-list-md text-md-center>
+        <v-layout row wrap>
+          <v-flex md6 fill-height>
+            <Quote />
+          </v-flex>
+        </v-layout>
+      </v-container>
       <!-- REPLACE WITH CONTENT -->
 
 
@@ -62,12 +69,14 @@
 <script>
 import Weather from "./components/Weather.vue";
 import HackerNews from './components/HackerNews.vue';
+import Quote from './components/Quote.vue';
 
 export default {
   name: "app",
   components: {
     Weather,
     HackerNews,
+    Quote,
   }
 };
 </script>

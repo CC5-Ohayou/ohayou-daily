@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "rapidapi-connect": "^0.0.6",
+    "unirest": "^0.5.1",
     "vue": "^2.5.17",
     "vuetify": "^1.1.13"
   },
