@@ -1,9 +1,7 @@
 <template>
   <div class="hackernews__container">
-    <v-card color="orange lighten-5">
-      <v-card-title class="justify-center" primary-title>
-         <h3 class="headline mb-0">Top Hackernews Stories</h3>
-      </v-card-title>
+    <v-card>
+      <v-card-media src="https://i.imgur.com/adx1r1l.png" height="80px" ></v-card-media>
       <v-card-text>
       <div v-if="this.storiesArray.length">
         <div v-for="story in storiesArray" v-bind:key="story.id">
@@ -81,6 +79,7 @@ methods: {
 <style>
 .hackernews__container {
   text-align: left;
+  margin-left: 5px;
 }
 
 .hn__title {

@@ -4,16 +4,14 @@
       <p>{{randomQuote}}</p>
     </div> -->
 
-  <div class="hackernews__container">
-    <v-card color="green lighten-5">
+  <div class="quotes__container">
+    <v-card color="grey darken-3">
       <v-card-title class="justify-center" primary-title>
-         <h3 class="headline mb-0">Random quote</h3>
+        <img height="40px" src="../assets/quote.svg">
       </v-card-title>
-      <v-card-text>
-      <div >
-         <blockquote>{{randomQuote}}</blockquote>
-         <p class="author">-{{author}}</p>
-      </div>
+      <v-card-text class="white--text">
+         <p class="font-weight-medium font-italic headline">"{{randomQuote}}"</p>
+         <p class="author">- {{author}}</p>
      </v-card-text>
     </v-card>
   </div>
@@ -37,7 +35,6 @@ export default {
       .end(function(result) {
         scope.randomQuote = result.body[0].quote;
         scope.author = result.body[0].author;
-        console.log(result.body[0]);
       });
   },
   name: "Quote",
@@ -51,5 +48,16 @@ export default {
 <style>
 .author{
   text-align: right;
+  color: #DDDDDD;
 }
+
+.quotes__container {
+  margin-top: 20px;
+  margin-right: 5px;
+}
+
+.quote {
+
+}
+
 </style>
