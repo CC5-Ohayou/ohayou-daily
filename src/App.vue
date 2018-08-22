@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <v-app>
-      <v-navigation-drawer 
+
+      <!-- SIDE DRAWER -->
+      <!-- <v-navigation-drawer 
       fixed
       :clipped="$vuetify.breakpoint.mdAndUp"
       app
@@ -23,7 +25,7 @@
           </v-layout>
         </v-list>
         
-      </v-navigation-drawer>
+      </v-navigation-drawer> -->
 
       <v-toolbar
       color="blue darken-3"
@@ -31,9 +33,8 @@
       app
       :clipped-left="$vuetify.breakpoint.mdAndup"
       fixed>
-        <v-toolbar-title style="width: 300px, align: left" class="toolbar-drawer">
-          <v-toolbar-side-icon @click.stop="drawer = !drawer" />
-          <span class="app-title">Meme Generator</span>
+        <v-toolbar-title style="width: 300px, align: left">
+          <span class="app-title">My Dashboard</span>
         </v-toolbar-title>
         <v-spacer/>
         <span>makedankmemes</span>
@@ -55,7 +56,6 @@ import Weather from "./components/Weather.vue";
 
 export default {
   name: "app",
-  drawer: true,
   components: {
     HelloWorld,
     Weather,
