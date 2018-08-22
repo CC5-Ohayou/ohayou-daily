@@ -26,7 +26,10 @@ const rapid = new RapidAPI(
 export default {
   location: "tokyo, japan",
   data: () => ({
-    information: 'something',
+    information: [{
+      high: 32,
+      low: 32,
+    }],
     error: false,
     }),
   
