@@ -55,7 +55,7 @@
 <script>
 import Weather from "./components/Weather.vue";
 import HackerNews from './components/HackerNews.vue';
-import Quote from './compnents/Quote.vue'
+import Quote from './components/Quote.vue'
 
 export default {
   name: "app",
