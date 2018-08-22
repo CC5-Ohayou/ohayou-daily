@@ -42,8 +42,7 @@
 
 
       <!-- REPLACE WITH CONTENT -->
-      <img alt="Vue logo" src="./assets/logo.png">
-      <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <HackerNews/>
       <!-- REPLACE WITH CONTENT -->
 
 
@@ -52,12 +51,14 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import HelloWorld from './components/HelloWorld.vue'
+import HackerNews from './components/HackerNews.vue'
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    HelloWorld,
+    HackerNews
   }
 };
 </script>
