@@ -2,7 +2,7 @@
   <div class="hackernews__container">
     <v-card color="red lighten-5">
       <v-card-title class="justify-center" primary-title>
-         <h3 class="headline mb-0">Random Word</h3>
+         <h3 class="headline mb-0">Famous Word</h3>
       </v-card-title>
       <v-card-text>
       <div >
