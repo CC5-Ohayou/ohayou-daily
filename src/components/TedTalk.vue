@@ -13,7 +13,6 @@
 <script>
 
 const axios = require('axios');
-import youtubeAPIKey from "../../apiKeys";
 
 export default {
 async mounted() {
