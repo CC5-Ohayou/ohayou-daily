@@ -1,18 +1,33 @@
 <template>
-  <div class="hackernews__container">
-    <v-card color="purple lighten-5">
+  <div class="love__container">
+    <v-card color="red darken-4" dark height="260px">
       <v-card-title class="justify-center" primary-title>
          <h3 class="headline mb-0">Love Calculator</h3>
       </v-card-title>
-      <v-card-text>
-      <div >
-        <v-text-field type="text" label="First Name" v-on:keyup="fpress" ></v-text-field>
-        <v-text-field type="text" label="Second Name" v-on:keyup="spress"></v-text-field>
-        <v-btn v-on:click="calculate">Calc</v-btn>
-         <p class="center">{{percentage}}</p>
-         <p class="center">{{result}}</p>
+      <div v-if="!percentage.length">
+        <v-container grid-list-md>
+          <v-layout row wrap>
+              <v-flex md4 fill-height>
+                <v-text-field color="white" type="text" label="Your Name" v-on:keyup="fpress" ></v-text-field>
+              </v-flex>
+              <v-flex md4 fill-height>
+                <img src="../assets/love.svg" width="80px">
+              </v-flex>
+              <v-flex md4 fill-height>
+                <v-text-field color="white" type="text" label="Your Lover's Name" v-on:keyup="spress"></v-text-field>
+              </v-flex>
+          </v-layout>
+        </v-container>
       </div>
-  </v-card-text>
+        <div v-if="percentage.length">
+          <br>
+          <br>
+          <p class="center">{{percentage}}</p>
+          <p class="center">{{result}}</p>
+        </div>
+        <div v-if="!percentage.length">
+          <v-btn light v-on:click="calculate">Show Result</v-btn>
+        </div>
     </v-card>
   </div>
 </template>
@@ -65,9 +80,11 @@ export default {
   font-size: 32px;
 }
 .center {
-text-align:center;
-font-size:24px;
-
+  text-align:center;
+  font-size:24px;
+}
+.love__container {
+  padding-right: 5px;
 }
 
 </style>

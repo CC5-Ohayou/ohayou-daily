@@ -50,9 +50,13 @@
           <v-flex md6 fill-height>
             <HackerNews />
           </v-flex>
+        </v-layout>
+        <v-layout row wrap>
           <v-flex md12 fill-height>
             <TedTalk />
           </v-flex>
+        </v-layout>
+        <v-layout row wrap class="loveword">
           <v-flex md6 fill-height>
             <LoveCalc />
           </v-flex>
@@ -103,5 +107,9 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
   font-size: 16px;
+}
+
+.loveword {
+  padding-top: 10px
 }
 </style>
