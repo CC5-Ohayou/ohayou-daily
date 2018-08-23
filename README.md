@@ -7,11 +7,6 @@
 yarn install
 ```
 
-## Start local server
-```
-yarn start
-```
-
 ### Compiles and hot-reloads for development
 ```
 yarn serve
@@ -20,6 +15,12 @@ yarn serve
 ### Compiles and minifies for production
 ```
 yarn build
+```
+
+## Start local server
+Starts a local server with the built files. Requires `yarn build` or `yarn heroku-postbuild` to be run for it to work.
+```
+yarn start
 ```
 
 ### Lints and fixes files
