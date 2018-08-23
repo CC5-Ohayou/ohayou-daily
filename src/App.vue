@@ -28,13 +28,13 @@
       </v-navigation-drawer> -->
 
       <v-toolbar
-      color="blue-grey darken-3"
+      color="blue-grey darken-4"
       dark
       app
       :clipped-left="$vuetify.breakpoint.mdAndup"
       fixed>
         <v-toolbar-title flat>
-          <span style="text-align: center" class="app-title">Ohayou Daily</span>
+          <img src="./assets/logo.png" height="45px" style="margin-top: 7px">
         </v-toolbar-title>
         <v-spacer/>
       </v-toolbar>
