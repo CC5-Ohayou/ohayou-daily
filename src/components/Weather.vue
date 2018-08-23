@@ -7,7 +7,7 @@
       <v-card-text>
         <span v-if="error">{{information}} </span>
         <span v-else>
-          <img height="40px" src="../assets/sun.svg"> <br>
+          <img height="40px" src="../assets/cloud-lightning.svg"> <br>
            <br>
           High: {{this.convert(information[0].high)}} °C  -  Low: {{this.convert(information[0].low)}} °C<br>
           {{information[0].text}}
