@@ -35,7 +35,7 @@ methods: {
   },
   getAPIKey: function () {
     if (process.env === "development") {
-      this.youtubeAPIKey = prcoess.env.VUE_APP_YT;
+      this.youtubeAPIKey = process.env.VUE_APP_YT;
     } else if (process.env === "production"){
       this.youtubeAPIKey = process.env.YT_KEY
     }
