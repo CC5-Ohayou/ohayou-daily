@@ -1,6 +1,7 @@
 # Ohayou Dashboard
 
 ## A daily dashboard to start your day right!
+![Preview](public/img/Preview.png)
 
 ## Project setup
 ```
