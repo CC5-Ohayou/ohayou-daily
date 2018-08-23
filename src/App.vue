@@ -53,7 +53,16 @@
           <v-flex md12 fill-height>
             <TedTalk />
           </v-flex>
+
+
+          <v-flex md6 fill-height>
+                      <LoveCalc />
+          </v-flex>
+          <v-flex md6 fill-height>
+            <RandomWord />
+          </v-flex>
         </v-layout>
+
       </v-container>
       <!-- <v-container grid-list-md text-md-center>
         <v-layout row wrap>
@@ -68,9 +77,11 @@
 
 <script>
 import Weather from "./components/Weather.vue";
-import HackerNews from './components/HackerNews.vue';
-import Quote from './components/Quote.vue';
-import TedTalk from './components/TedTalk.vue'
+import HackerNews from "./components/HackerNews.vue";
+import Quote from "./components/Quote.vue";
+import TedTalk from "./components/TedTalk.vue";
+import LoveCalc from "./components/LoveCalc.vue";
+import RandomWord from "./components/RandomWord.vue";
 
 export default {
   name: "app",
@@ -79,6 +90,8 @@ export default {
     HackerNews,
     Quote,
     TedTalk,
+    LoveCalc,
+    RandomWord
   }
 };
 </script>
