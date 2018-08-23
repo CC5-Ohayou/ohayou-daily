@@ -1,7 +1,7 @@
 # Ohayou Dashboard
 
 ## A daily dashboard to start your day right!
-![Preview](public/img/Preview.png)
+![Preview](public/img/header.png)
 
 ## What's built in:
 - Vuetiful frontend!
@@ -24,7 +24,7 @@
 - [YahooWeatherAPI](https://english.api.rakuten.net/dimashirokov/api/YahooWeatherAPI)
 - [HackerNews API](https://english.api.rakuten.net/dimashirokov/api/HackerNews)
 - [Random Famous Quotes](https://english.api.rakuten.net/andruxnet/api/Random%20Famous%20Quotes)
-- [Urban Dictionary](https://english.api.rakuten.net/andruxnet/api/Random%20Famous%20Quotes)
+- [Urban Dictionary](https://api.rakuten.net/community/api/Urban%20Dictionary)
 - [Love Compatibility](https://api.rakuten.net/ajith/api/Love%20Calculator)
 
 ### Others APIs:
