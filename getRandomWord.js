@@ -2644,7 +2644,6 @@ const words = [
   "switch",
   "step"
 ];
-
-    let random = Math.floor(Math.random() * words.length);
-    return words[random];
+    const day = new Date().getDate();
+    return words[(day)*76];
 }

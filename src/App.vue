@@ -53,10 +53,8 @@
           <v-flex md12 fill-height>
             <TedTalk />
           </v-flex>
-
-
           <v-flex md6 fill-height>
-                      <LoveCalc />
+            <LoveCalc />
           </v-flex>
           <v-flex md6 fill-height>
             <RandomWord />

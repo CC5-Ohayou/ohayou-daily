@@ -4,21 +4,22 @@
       <v-card-title class="justify-center" primary-title>
          <h3 class="headline mb-0">Love Calculator</h3>
       </v-card-title>
-      <v-card-input>
+      <v-card-text>
       <div >
         <v-text-field type="text" label="First Name" v-on:keyup="fpress" ></v-text-field>
         <v-text-field type="text" label="Second Name" v-on:keyup="spress"></v-text-field>
         <v-btn v-on:click="calculate">Calc</v-btn>
-         <p class="center" v-model="percentage">{{percentage}}</p>
-         <p class="center" v-model="result">{{result}}</p>
+         <p class="center">{{percentage}}</p>
+         <p class="center">{{result}}</p>
       </div>
-  </v-card-input>
+  </v-card-text>
     </v-card>
   </div>
 </template>
 
 <script>
-let unirest = require("unirest");
+const unirest = require("unirest");
+
 export default {
   name: "LoveCalc",
   components: {},

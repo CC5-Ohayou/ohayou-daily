@@ -1,14 +1,12 @@
 <template>
   <div class="hackernews__container">
-    <v-card color="red lighten-5">
-      <v-card-title class="justify-center" primary-title>
-         <h3 class="headline mb-0">Famous Word</h3>
+    <v-card>
+      <v-card-title class="justify-left" primary-title>
+        <h3 class="title mb-0 font-weight-bold" style="background-color: yellow"> TOP DEFINITION </h3>
       </v-card-title>
       <v-card-text>
-      <div >
-         <p class= "word">{{word}}</p>
-         <p class="definition">{{definition}}</p>
-      </div>
+        <p class="display-1" style="color: blue, font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif;">{{word}}</p>
+        <p class="definition">{{definition}}</p>
      </v-card-text>
     </v-card>
   </div>
@@ -18,6 +16,9 @@
 <script>
 import word from "../../getRandomWord.js";
 let unirest = require("unirest");
+
+// console.log(words[date.getDay()*142])
+
 export default {
   name: "RandomWord",
   mounted() {
@@ -46,11 +47,4 @@ export default {
 };
 </script>
 <style>
-.word {
-  text-align: center;
-  font-size: 48px;
-}
-.definition {
-  text-align: center;
-}
 </style>
