@@ -32,7 +32,7 @@ yarn lint
 - Current top 10 HackerNews articles based on votes
 - A famous quote to inspire you
 - The latest TED Talk for some quick learning
-- A love compatibility tester for a bit of fun
+- A love compatibility tester, because why not?
 
 ## Future Goals:
 - Insert your own city for weather forecasting
