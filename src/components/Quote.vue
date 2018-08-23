@@ -1,9 +1,4 @@
 <template>
-    <!-- <div>
-      <h1>Random quote</h1> 
-      <p>{{randomQuote}}</p>
-    </div> -->
-
   <div class="hackernews__container">
     <v-card color="green lighten-5">
       <v-card-title class="justify-center" primary-title>
@@ -11,17 +6,16 @@
       </v-card-title>
       <v-card-text>
       <div >
-         <blockquote>{{randomQuote}}</blockquote>
+         <blockquote class="quote">"{{randomQuote}}"</blockquote>
          <p class="author">-{{author}}</p>
       </div>
      </v-card-text>
     </v-card>
   </div>
-
 </template>
 
 <script>
-var unirest = require("unirest");
+let unirest = require("unirest");
 export default {
   mounted() {
     const scope = this;
@@ -37,7 +31,6 @@ export default {
       .end(function(result) {
         scope.randomQuote = result.body[0].quote;
         scope.author = result.body[0].author;
-        console.log(result.body[0]);
       });
   },
   name: "Quote",
@@ -51,5 +44,8 @@ export default {
 <style>
 .author{
   text-align: right;
+}
+.quote{
+  font-size:32px;
 }
 </style>
