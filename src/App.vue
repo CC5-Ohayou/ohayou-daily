@@ -57,8 +57,21 @@
           <v-flex md6 fill-height>
             <Quote />
           </v-flex>
+          <v-flex md6 fill-height>
+            <RandomWord />
+          </v-flex>
         </v-layout>
       </v-container>
+      <v-container grid-list-md text-md-center>
+        <v-layout row wrap>
+          <v-flex md6 fill-height>
+            <LoveCalc />
+          </v-flex>
+          <v-flex md6 fill-height>
+          </v-flex>
+        </v-layout>
+      </v-container>
+
       <!-- REPLACE WITH CONTENT -->
 
 
@@ -68,8 +81,10 @@
 
 <script>
 import Weather from "./components/Weather.vue";
-import HackerNews from './components/HackerNews.vue';
-import Quote from './components/Quote.vue';
+import HackerNews from "./components/HackerNews.vue";
+import Quote from "./components/Quote.vue";
+import RandomWord from "./components/RandomWord.vue";
+import LoveCalc from "./components/LoveCalc.vue";
 
 export default {
   name: "app",
@@ -77,6 +92,8 @@ export default {
     Weather,
     HackerNews,
     Quote,
+    RandomWord,
+    LoveCalc,
   }
 };
 </script>
