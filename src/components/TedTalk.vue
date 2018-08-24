@@ -34,6 +34,7 @@ methods: {
       this.video.title = response.data.items[0].snippet.title;
   },
   getAPIKey: function () {
+    console.log(process.env);
     if (process.env.NODE_ENV === "development") {
       this.youtubeAPIKey = process.env.VUE_APP_YT;
     } else if (process.env === "production"){
