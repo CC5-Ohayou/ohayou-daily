@@ -83,8 +83,8 @@ export default {
   text-align:center;
   font-size:24px;
 }
-.love__container {
+/* .love__container {
   padding-right: 5px;
-}
+} */
 
 </style>

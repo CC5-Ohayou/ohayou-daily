@@ -6,8 +6,14 @@
       </v-card-title>
       <v-card-text>
         <span v-if="error">{{information}} </span>
-        <span v-else>
+        <span v-if="thunder">
           <img height="40px" src="../assets/cloud-lightning.svg"> <br>
+           <br>
+          High: {{this.convert(information[0].high)}} °C  -  Low: {{this.convert(information[0].low)}} °C<br>
+          {{information[0].text}}
+        </span>
+        <span v-if="!thunder">
+          <img height="40px" src="../assets/sun.svg"> <br>
            <br>
           High: {{this.convert(information[0].high)}} °C  -  Low: {{this.convert(information[0].low)}} °C<br>
           {{information[0].text}}
@@ -32,13 +38,15 @@ const rapid = new RapidAPI(
 export default {
   location: "tokyo, japan",
   data: () => ({
-    information: [{
-      high: 32,
-      low: 32,
-    }],
+    information: [
+      {
+        high: 32,
+        low: 32
+      }
+    ],
     error: false,
-    }),
-  
+    thunder: false,
+  }),
 
   mounted() {
     rapid
@@ -47,15 +55,18 @@ export default {
       })
       .on("success", payload => {
         this.information = payload.query.results.channel.item.forecast;
+        if (this.information[0].text.includes("Thunderstorm")) {
+          this.thunder = true;
+        }
       })
       .on("error", payload => {
-        this.information = 'Error fetching results';
+        this.information = "Error fetching results";
         this.error = true;
       });
   },
   methods: {
     convert: function(fahrenheit) {
-      const celsius = (fahrenheit -32) * 5 / 9;
+      const celsius = (fahrenheit - 32) * 5 / 9;
       return Math.round(celsius);
     }
   }
