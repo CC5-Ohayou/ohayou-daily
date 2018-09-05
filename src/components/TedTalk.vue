@@ -16,8 +16,8 @@ const axios = require('axios');
 
 export default {
 async mounted() {
-  this.getVideos();
   this.getAPIKey();
+  this.getVideos();
 
 },
 data: () => ({
@@ -29,15 +29,16 @@ data: () => ({
 }),
 methods: {
   getVideos: async function () {
-     const response = await axios.get("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCAuUUnT6oDeKwE6v1NGQxug&maxResults=1&order=date&type=video&key=AIzaSyBp1cSbOuPp9mTYHtez55ycUOScbK7hABA")
+      const response = await axios.get("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCAuUUnT6oDeKwE6v1NGQxug&maxResults=1&order=date&type=video&key=" + this.youtubeAPIKey)
       this.video.id = response.data.items[0].id.videoId; 
       this.video.title = response.data.items[0].snippet.title;
   },
   getAPIKey: function () {
-    if (process.env === "development") {
+    if (process.env.NODE_ENV === "development") {
       this.youtubeAPIKey = process.env.VUE_APP_YT;
-    } else if (process.env === "production"){
-      this.youtubeAPIKey = process.env.YT_KEY
+    } else if (process.env.NODE_ENV === "production"){
+      console.log(process.env)
+      this.youtubeAPIKey = process.env.YT_KEY;
     }
   }
 } 

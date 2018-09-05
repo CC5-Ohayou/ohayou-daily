@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="102px" height="90px" viewBox="0 0 102 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>loveCalc</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="loveCalc" transform="translate(3.000000, 3.000000)" stroke="#FFFFFF" stroke-width="6">
+            <g id="heart">
+                <path d="M88.1779762,7.86363636 C83.4894353,3.17268849 77.1290877,0.537156267 70.4969328,0.537156267 C63.8647778,0.537156267 57.5044302,3.17268849 52.8158893,7.86363636 L47.9979186,12.6818182 L43.1799479,7.86363636 C33.4149771,-1.90176192 17.5828318,-1.9017618 7.81786119,7.86363663 C-1.94710938,17.6290351 -1.9471095,33.4618742 7.81786092,43.2272727 L12.6358316,48.0454545 L47.9979186,83.4090909 L83.3600055,48.0454545 L88.1779762,43.2272727 C92.8687186,38.5385264 95.5041353,32.1779001 95.5041353,25.5454545 C95.5041353,18.913009 92.8687186,12.5523827 88.1779762,7.86363636 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
