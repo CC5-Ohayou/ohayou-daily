@@ -38,7 +38,7 @@ methods: {
       this.youtubeAPIKey = process.env.VUE_APP_YT;
     } else if (process.env.NODE_ENV === "production"){
       console.log(process.env)
-      this.youtubeAPIKey = process.env.YT_KEY;
+      this.youtubeAPIKey = process.env.VUE_APP_YT;
     }
   }
 } 

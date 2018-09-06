@@ -19,17 +19,27 @@
 </template>
 
 <script>
-var unirest = require("unirest");
+const unirest = require("unirest");
+
+
+
 export default {
   mounted() {
+    console.log(process.env.NODE_ENV)
+    if (process.env.NODE_ENV === "development") {
+      this.key = process.env.VUE_APP_QUOTE;
+    } else if (process.env.NODE_ENV === "production"){
+      this.key = process.env.VUE_APP_QUOTE;
+    }
     const scope = this;
+    const key = this.key;
     unirest
       .get(
         "https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous&count=1"
       )
       .header(
         "X-Mashape-Key",
-        "K4O3kdE58HmshNM9ar6nbjUQGnPep1oHFfnjsnuI6QyJ6xoWu7"
+        key
       )
       .header("X-Mashape-Host", "andruxnet-random-famous-quotes.p.mashape.com")
       .end(function(result) {
@@ -42,6 +52,7 @@ export default {
   data: () => ({
     randomQuote: "",
     author:"",
+    key: ""
   })
 };
 </script>
