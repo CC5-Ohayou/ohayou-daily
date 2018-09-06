@@ -48,7 +48,6 @@ export default {
   methods: {
     calculate: function() {
       const scope = this;
-      console.log(process.env)
       if (process.env.NODE_ENV === "development") {
         this.key = process.env.VUE_APP_QUOTE;
       } else if (process.env.NODE_ENV === "production") {
