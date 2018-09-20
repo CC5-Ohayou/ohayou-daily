@@ -60,9 +60,9 @@
           <v-flex md12 fill-height>
             <LoveCalc />
           </v-flex>
-          <!-- <v-flex md6 fill-height>
+          <v-flex md6 fill-height>
             <RandomWord />
-          </v-flex> -->
+          </v-flex>
         </v-layout>
 
       </v-container>
