@@ -42,21 +42,24 @@ export default {
     fname: "",
     sname: "",
     percentage: "",
-    result: ""
+    result: "",
+    key: ""
   }),
   methods: {
     calculate: function() {
       const scope = this;
+      if (process.env.NODE_ENV === "development") {
+        this.key = process.env.VUE_APP_QUOTE;
+      } else if (process.env.NODE_ENV === "production") {
+        this.key = process.env.VUE_APP_QUOTE;
+      }
       unirest
         .get(
           `https://love-calculator.p.mashape.com/getPercentage?fname=${
             scope.fname
           }&sname=${scope.sname}`
         )
-        .header(
-          "X-Mashape-Key",
-          "K4O3kdE58HmshNM9ar6nbjUQGnPep1oHFfnjsnuI6QyJ6xoWu7"
-        )
+        .header("X-Mashape-Key", this.key)
         .header("X-Mashape-Host", "love-calculator.p.mashape.com")
         .end(function(result) {
           scope.percentage = result.body.percentage + "%";
@@ -80,11 +83,10 @@ export default {
   font-size: 32px;
 }
 .center {
-  text-align:center;
-  font-size:24px;
+  text-align: center;
+  font-size: 24px;
 }
 /* .love__container {
   padding-right: 5px;
 } */
-
 </style>

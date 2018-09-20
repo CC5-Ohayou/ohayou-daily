@@ -23,13 +23,18 @@ export default {
   name: "RandomWord",
   mounted() {
     let scope = this;
+    if (process.env.NODE_ENV === "development") {
+        this.key = process.env.VUE_APP_QUOTE;
+      } else if (process.env.NODE_ENV === "production") {
+        this.key = process.env.VUE_APP_QUOTE;
+      }
     unirest
       .get(
         "https://mashape-community-urban-dictionary.p.mashape.com/define?term="+ this.word
       )
       .header(
         "X-Mashape-Key",
-        "K4O3kdE58HmshNM9ar6nbjUQGnPep1oHFfnjsnuI6QyJ6xoWu7"
+        key
       )
       .header(
         "X-Mashape-Host",
