@@ -53,13 +53,16 @@ methods: {
     return this.storyIds[id];
   },
   showUrlName: function (data) {
-      let a = document.createElement('a');
-      a.href = data;
-      let hostname = a.hostname;
-      if (hostname[0] === "w" && hostname[1] === "w" && hostname[2] === "w" ) {
-        hostname = hostname.slice(4);
+      console.log(data)
+      if (data) {
+        let a = document.createElement('a');
+        a.href = data;
+        let hostname = a.hostname;
+        if (hostname[0] === "w" && hostname[1] === "w" && hostname[2] === "w" ) {
+          hostname = hostname.slice(4);
+        }
+        return hostname;
       }
-      return hostname;
   }
 } 
 
@@ -77,7 +80,7 @@ methods: {
 }
 
 .hn__title:hover {
-  color: #0288D1;
+  color: #0288d1;
 }
 
 .hn__urlName {
