@@ -14,39 +14,24 @@
 </template>
 
 <script>
-import word from "../../getRandomWord.js";
-let unirest = require("unirest");
-
-// console.log(words[date.getDay()*142])
-
+require('dotenv').config()
 export default {
   name: "RandomWord",
   mounted() {
     let scope = this;
-    if (process.env.NODE_ENV === "development") {
-        this.key = process.env.VUE_APP_QUOTE;
-      } else if (process.env.NODE_ENV === "production") {
-        this.key = process.env.VUE_APP_QUOTE;
-      }
-    unirest
-      .get(
-        "https://mashape-community-urban-dictionary.p.mashape.com/define?term="+ this.word
-      )
-      .header(
-        "X-Mashape-Key",
-        key
-      )
-      .header(
-        "X-Mashape-Host",
-        "mashape-community-urban-dictionary.p.mashape.com"
-      )
-      .end(function(result) {
-        scope.definition=result.body.list[1].definition;
-      });
+
+    const url = "https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=";
+    const key = process.env.VUE_APP_WORDNIK_KEY;
+    fetch(url+key)
+      .then(data=>data.json())
+      .then(data=>{
+        scope.word=data.word;
+        scope.definition=data.definitions[0].text;
+    })
   },
   components: {},
   data: () => ({
-    word: word(),
+    word: "",
     definition:"",
   })
 };
