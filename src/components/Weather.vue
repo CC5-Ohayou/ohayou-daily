@@ -28,15 +28,14 @@
 <script>
 import RapidAPI from "rapidapi-connect";
 import unirest from "unirest";
-console.log(process.env)
 let name;
 let key;
 if (process.env.NODE_ENV === "development") {
-  name = process.env.VUE_WEATHER_NAME;
-  key = process.env.VUE_WEATHER_KEY;
+  name = process.env.VUE_APP_WEATHER_NAME;
+  key = process.env.VUE_APP_WEATHER_KEY;
 } else if (process.env.NODE_ENV === "production") {
-  name = process.env.VUE_WEATHER_NAME;
-  key = process.env.VUE_WEATHER_KEY;
+  name = process.env.VUE_APP_WEATHER_NAME;
+  key = process.env.VUE_APP_WEATHER_KEY;
 }
 const rapid = new RapidAPI(name, key);
 
