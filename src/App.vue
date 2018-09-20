@@ -57,7 +57,7 @@
           </v-flex>
         </v-layout>
         <v-layout row wrap class="loveword">
-          <v-flex md12 fill-height>
+          <v-flex md6 fill-height>
             <LoveCalc />
           </v-flex>
           <v-flex md6 fill-height>
