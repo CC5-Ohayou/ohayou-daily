@@ -40,10 +40,16 @@
 <script>
 import RapidAPI from "rapidapi-connect";
 import unirest from "unirest";
-const rapid = new RapidAPI(
-  "default-application_5b7bcce8e4b0a349c04b0631",
-  "12a3a94c-5eac-4a0a-ab60-81114755bd05"
-);
+let name;
+let key;
+if (process.env.NODE_ENV === "development") {
+  name = process.env.VUE_APP_WEATHER_NAME;
+  key = process.env.VUE_APP_WEATHER_KEY;
+} else if (process.env.NODE_ENV === "production") {
+  name = process.env.VUE_APP_WEATHER_NAME;
+  key = process.env.VUE_APP_WEATHER_KEY;
+}
+const rapid = new RapidAPI(name, key);
 
 // color="light-blue lighten-5"
 

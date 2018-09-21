@@ -19,6 +19,7 @@ export default {
   name: "RandomWord",
   mounted() {
     let scope = this;
+
     const url = "https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=";
     const key = process.env.VUE_APP_WORDNIK_KEY;
     fetch(url+key)
