@@ -1,32 +1,6 @@
 <template>
   <div id="app">
     <v-app>
-
-      <!-- SIDE DRAWER -->
-      <!-- <v-navigation-drawer 
-      fixed
-      :clipped="$vuetify.breakpoint.mdAndUp"
-      app
-      v-model="drawer">
-        <v-list dense>
-          <v-layout
-          row
-          align-center
-          >
-            <v-flex xs6>
-              Insert Random Meme Button!
-            </v-flex>
-          </v-layout>
-          <v-layout
-          row
-          align-center
-          >
-            <v-flex xs6>Insert Robot Meme Button!</v-flex>
-          </v-layout>
-        </v-list>
-        
-      </v-navigation-drawer> -->
-
       <v-toolbar
       color="blue-grey darken-4"
       dark
@@ -38,9 +12,6 @@
         </v-toolbar-title>
         <v-spacer/>
       </v-toolbar>
-
-
-      <!-- REPLACE WITH CONTENT -->
       <v-container grid-list-md text-md-center style="margin-top: 0px; padding-right: 0px; padding-left: 0px;">
         <v-layout row wrap>
           <v-flex md6 fill-height>
@@ -64,15 +35,7 @@
             <RandomWord />
           </v-flex>
         </v-layout>
-
       </v-container>
-      <!-- <v-container grid-list-md text-md-center>
-        <v-layout row wrap>
-          <v-flex md6 fill-height>
-          </v-flex>
-        </v-layout>
-      </v-container> -->
-      <!-- REPLACE WITH CONTENT -->
     </v-app>
   </div>
 </template>

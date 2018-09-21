@@ -1,9 +1,4 @@
 <template>
-    <!-- <div>
-      <h1>Random quote</h1> 
-      <p>{{randomQuote}}</p>
-    </div> -->
-
   <div class="quotes__container">
     <v-card color="grey darken-3">
       <v-card-title class="justify-center" primary-title>
@@ -15,18 +10,12 @@
      </v-card-text>
     </v-card>
   </div>
-
 </template>
 
 <script>
 const unirest = require("unirest");
-
-
-
 export default {
   mounted() {
-    console.log(process.env);
-
     if (process.env.NODE_ENV === "development") {
       this.key = process.env.VUE_APP_QUOTE;
     } else if (process.env.NODE_ENV === "production"){
@@ -57,15 +46,14 @@ export default {
   })
 };
 </script>
+
 <style>
 .author{
   text-align: right;
   color: #DDDDDD;
 }
-
 .quotes__container {
   margin-top: 22px;
   margin-right: 5px;
 }
-
 </style>

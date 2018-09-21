@@ -11,14 +11,11 @@
 </template>
 
 <script>
-
 const axios = require('axios');
-
 export default {
 async mounted() {
   this.getAPIKey();
   this.getVideos();
-
 },
 data: () => ({
   video: {
