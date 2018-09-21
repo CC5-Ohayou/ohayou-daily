@@ -16,7 +16,18 @@
 <script>
 
 const RapidAPI = require('rapidapi-connect');
-const rapid = new RapidAPI("default-application_5b74c245e4b02e44927d2a04", "16e00bd4-1869-48e4-babb-f07a3d3552e5");
+
+let name;
+let key;
+if (process.env.NODE_ENV === "development") {
+  name = process.env.VUE_APP_HACKER_NAME;
+  key = process.env.VUE_APP_HACKER_KEY;
+} else if (process.env.NODE_ENV === "production") {
+  name = process.env.VUE_APP_HACKER_NAME;
+  key = process.env.VUE_APP_HACKER_KEY;
+}
+
+const rapid = new RapidAPI(name, key);
 
 export default {
 async mounted() {
