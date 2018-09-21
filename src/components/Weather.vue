@@ -35,8 +35,6 @@
   </div>
 </template>
 
-
-
 <script>
 import RapidAPI from "rapidapi-connect";
 import unirest from "unirest";
@@ -50,8 +48,6 @@ if (process.env.NODE_ENV === "development") {
   key = process.env.VUE_APP_WEATHER_KEY;
 }
 const rapid = new RapidAPI(name, key);
-
-// color="light-blue lighten-5"
 
 export default {
   location: "tokyo, japan",

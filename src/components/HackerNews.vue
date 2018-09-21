@@ -46,14 +46,12 @@ methods: {
         }).on('success', (payload) => {
           array.push(payload)
         }).on('error', (payload)=>{
-          /*YOUR CODE GOES HERE*/ 
     });
   },
   getId: function (id) {
     return this.storyIds[id];
   },
   showUrlName: function (data) {
-      console.log(data)
       if (data) {
         let a = document.createElement('a');
         a.href = data;
