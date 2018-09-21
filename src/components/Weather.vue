@@ -12,7 +12,19 @@
           High: {{this.convert(information[0].high)}} °C  -  Low: {{this.convert(information[0].low)}} °C<br>
           {{information[0].text}}
         </span>
-        <span v-if="!thunder">
+        <span v-if="rain">
+          <img height="40px" src="../assets/cloud-rain.svg"> <br>
+           <br>
+          High: {{this.convert(information[0].high)}} °C  -  Low: {{this.convert(information[0].low)}} °C<br>
+          {{information[0].text}}
+        </span>
+        <span v-if="cloudy">
+          <img height="40px" src="../assets/cloud.svg"> <br>
+           <br>
+          High: {{this.convert(information[0].high)}} °C  -  Low: {{this.convert(information[0].low)}} °C<br>
+          {{information[0].text}}
+        </span>
+        <span v-if="!thunder && !rain && !cloudy">
           <img height="40px" src="../assets/sun.svg"> <br>
            <br>
           High: {{this.convert(information[0].high)}} °C  -  Low: {{this.convert(information[0].low)}} °C<br>
@@ -46,6 +58,8 @@ export default {
     ],
     error: false,
     thunder: false,
+    rain: false,
+    cloudy: false,
   }),
 
   mounted() {
@@ -57,6 +71,12 @@ export default {
         this.information = payload.query.results.channel.item.forecast;
         if (this.information[0].text.includes("Thunderstorm")) {
           this.thunder = true;
+        }
+        if (this.information[0].text.includes("Showers")) {
+          this.rain = true;
+        }
+        if (this.information[0].text.includes("loudy")) {
+          this.cloudy = true;
         }
       })
       .on("error", payload => {
