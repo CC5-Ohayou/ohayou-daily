@@ -1,9 +1,9 @@
 # Ohayou Dashboard
-<center>
-## A daily dashboard to start your day right!
-![Preview](public/img/header.png)
-[Link to the demo](https://ohayou-daily.herokuapp.com/)
-</center
+<p align="center">
+<h2>A daily dashboard to start your day right!</h2>  
+<img alt="preview" title="preview" src="public/img/header.png">
+<a href="https://ohayou-daily.herokuapp.com/">Link to live demo</a>
+</p>
   
 ## What's built in:
 - Vuetiful frontend!
