@@ -1,7 +1,7 @@
 # Ohayou Daily Dashboard
 
 <p align="center">
-  <h2>A daily dashboard to start your day right!</h2>  
+  A daily dashboard to start your day right!
 </p>
 
 <p align="center">
