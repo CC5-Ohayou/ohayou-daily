@@ -1,6 +1,14 @@
+# Ohayou Daily Dashboard
+
 <p align="center">
   <h2>A daily dashboard to start your day right!</h2>  
+</p>
+
+<p align="center">
   <img alt="preview" title="preview" src="public/img/header.png">
+</p>
+
+<p align="center">
   <a href="https://ohayou-daily.herokuapp.com/">Link to live demo</a>
 </p>
   
