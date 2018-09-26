@@ -1,8 +1,7 @@
-# Ohayou Dashboard
 <p align="center">
-<h2>A daily dashboard to start your day right!</h2>  
-<img alt="preview" title="preview" src="public/img/header.png">
-<a href="https://ohayou-daily.herokuapp.com/">Link to live demo</a>
+  <h2>A daily dashboard to start your day right!</h2>  
+  <img alt="preview" title="preview" src="public/img/header.png">
+  <a href="https://ohayou-daily.herokuapp.com/">Link to live demo</a>
 </p>
   
 ## What's built in:
