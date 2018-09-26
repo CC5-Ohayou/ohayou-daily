@@ -2,6 +2,7 @@
 
 ## A daily dashboard to start your day right!
 ![Preview](public/img/header.png)
+[Link to the demo](https://ohayou-daily.herokuapp.com/)
 
 ## What's built in:
 - Vuetiful frontend!
