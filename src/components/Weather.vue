@@ -74,7 +74,7 @@ export default {
         if (this.information[0].text.includes("Thunderstorm")) {
           this.thunder = true;
         }
-        if (this.information[0].text.includes("Showers")) {
+        if (this.information[0].text.includes("Showers") || this.information[0].text.includes("Rain")) {
           this.rain = true;
         }
         if (this.information[0].text.includes("loudy")) {
